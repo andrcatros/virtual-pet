@@ -17,7 +17,16 @@ describe("Pet.age", () => {
 describe("Pet.growUp()", () => {
   const testPet = new Pet('Andy')
   testPet.growUp()
-  it("increases a Pet object's age in 1 increments", () => {
+  it("increases a Pet object's age in 1-point increments & hunger in 5-point increments", () => {
     expect(testPet.age).toEqual(1);
+    expect(testPet.hunger).toEqual(5);
+  })
+})
+
+describe("Pet.growUp()", () => {
+  const testPet = new Pet('Rex')
+  testPet.growUp()
+  it("decreases a Pet object's fitness in 3-point decrements", () => {
+    expect(testPet.fitness).toEqual(7);
   })
 })
