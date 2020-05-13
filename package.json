@@ -4,7 +4,7 @@
   "description": "Config file for virtual-pet project.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose --bail"
   },
   "author": "Andreea Ros",
   "license": "ISC",
