@@ -26,7 +26,19 @@ describe("Pet.growUp()", () => {
 describe("Pet.growUp()", () => {
   const testPet = new Pet('Rex')
   testPet.growUp()
+  testPet.growUp()
+  testPet.growUp()
+  testPet.growUp()
   it("decreases a Pet object's fitness in 3-point decrements", () => {
-    expect(testPet.fitness).toEqual(7);
+    expect(testPet.fitness).toEqual(0);
   })
 })
+
+describe("Pet.walk()", () => {
+  const testPet = new Pet ('Fido')
+  testPet.walk()
+  testPet.walk()
+  testPet.walk()
+  it("increases a Pet object's fitness in 4-point incremenents", () => {
+    expect(testPet.fitness).toEqual(10);})
+  })
