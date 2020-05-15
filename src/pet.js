@@ -17,7 +17,9 @@ class Pet {
         this.name = name;
         this.age = 0;
         this.hunger = 0;
-        this.fitness = 10; }
+        this.fitness = 10; 
+        this.children = [];
+    }
 
     // getter
     get isAlive() {
@@ -26,7 +28,7 @@ class Pet {
         }
         else {
             return false;}}
-            
+
     // methods 
     growUp = function(){
         if (!this.isAlive){throw new Error('Your pet is no longer alive :(')}
@@ -78,10 +80,30 @@ class Pet {
             else {
                 return 'I feel great!'
             }}
+        };
+
+    // baby methods
+
+    adoptChild = function(children){
+        if (!this.isAlive){throw new Error('Your pet is no longer alive :(')}
+        else {
+            this.children.push(children)
+        }
+    }    
+
+    haveChild = function(childName){
+        if (!this.isAlive){throw new Error('Your pet is no longer alive :(')}
+        else {
+            this.children.push(new Pet(childName));
+            this.children.push(new Pet('Billy'));
         }
     }
-
+}
     
 
 module.exports = Pet 
 
+const parent = new Pet('Dave');
+
+parent.haveChild('Amelia');
+console.log(parent.children)
