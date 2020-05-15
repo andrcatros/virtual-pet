@@ -1,17 +1,17 @@
 # Virtual Pet 
 
-This is a virtual pet program built in JavaScript. It allows you to create a pet and take care of them.
+by  *Andreea Ros* - [andrcatros] (https://github.com/andrcatros) 
 
-## Getting Started 
+A virtual pet Object for Javascript.
 
-## Prerequisites 
+## Features 
+* Pet Objects have 6 properties: `name` (also the only constructor argument), `age`, `fitness`, `hunger` and `isAlive`.
+* Pet Objects can `growUp()`, `feed()` and `walk()`.
+* Pet Objects also have the array property `children` and parent Pet Objects can get children with the methods `adoptChild()` and `haveChild()`.
 
-### Installing 
 
 ## Built With
-* Jest () - 
+* Jest (https://jestjs.io/) - was used to write the tests for this project (see **test** folder).
 
 ## Versioning 
-
-## Author 
-This project was created by *Andreea Ros* - [andrcatros](https://github.com/andrcatros)
+This is version 1.0.
