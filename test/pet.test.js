@@ -91,3 +91,23 @@ describe("Pet.isAlive()", () => {
     expect(testPet2.isAlive).toBe(true)
   })
 })
+
+describe("Pet.adoptChild()", () => {
+  const testPet = new Pet('Laika')
+  const Billy = new Pet ('Billy')
+  testPet.adoptChild(Billy)
+  it("adds a pre-existing Pet object to other Pet object's children array property", () => {
+    expect(testPet.children).toBeInstanceOf(Array)
+    expect(testPet.children[0]).toBe(Billy)
+  })
+})
+
+describe("Pet.haveChild()", () => {
+  const testPet = new Pet('Muttnik')
+  testPet.haveChild('Amelia');
+  it("when passed a name string, adds a Pet object to the parent Pet object's children array property", () => {
+    expect(testPet.children).toBeInstanceOf(Array)
+    expect(testPet.children[0]).toBeInstanceOf(Object)
+    expect(testPet.children[0].name).toBe('Amelia')
+  })
+})

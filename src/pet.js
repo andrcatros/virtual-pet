@@ -1,12 +1,14 @@
+// max and min values
 const MAXIMUM_FITNESS = 10 ;
 const MINIMUM_LEVEL = 0 ;
 const MAX_AGE = 30;
 const MAX_HUNGER = 10;
 
+// increments and decrements 
+
 const FITNESS_DECREMENT = 3 
 const GROW_HUNGER_INCREMENT = 5 ;
 const GROW_AGE_INCREMENT = 1 ;
-
 const WALK_INCREMENT = 4 ;
 const FEED_DECREMENT = 3;
 
@@ -82,7 +84,7 @@ class Pet {
             }}
         };
 
-    // baby methods
+    // child methods
 
     adoptChild = function(children){
         if (!this.isAlive){throw new Error('Your pet is no longer alive :(')}
@@ -102,8 +104,3 @@ class Pet {
     
 
 module.exports = Pet 
-
-const parent = new Pet('Dave');
-
-parent.haveChild('Amelia');
-console.log(parent.children)
